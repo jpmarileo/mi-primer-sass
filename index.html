@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería La Mafia • Delivery Rápido</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">LA MAFIA</h1>
+            <nav>
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Menú</a>
+                <a href="#" class="nav-link">Promos</a>
+                <a href="#" class="nav-link">Contacto</a>
+            </nav>
+            <button class="boton carrito">🛒 Carrito (0)</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>PIZZAS HECHAS CON AMOR Y MUCHA MALDAD</h2>
+        <p>Delivery en menos de 30 minutos • Caliente y deliciosa</p>
+        <button class="boton grande">Ver el menú completo</button>
+    </section>
+
+    <section class="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="grid-tarjetas" id="menu-grid">
+    <!-- Las pizzas se cargan con JavaScript -->
+</div>
+    </section>
+
+    <footer>
+        <p>Pizzería La Mafia © 2026 • Hecho con SASS por Juan Pablo</p>
+    </footer>
+       <!-- MODAL CARRITO -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Tu Carrito</h2>
+            <div id="cart-items"></div>
+            <div class="total">Total: <span id="cart-total">$0</span></div>
+            <button class="boton" id="btn-vaciar">Vaciar Carrito</button>
+            <button class="boton" id="btn-pagar">Pagar Ahora</button>
+            <button class="boton cerrar">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- MODAL DE CONFIRMACIÓN DE PEDIDO -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Confirmar Pedido</h2>
+            
+            <div class="order-options">
+                <label><input type="radio" name="tipo-pedido" value="delivery" checked> Delivery a domicilio</label>
+                <label><input type="radio" name="tipo-pedido" value="pickup"> Retiro en tienda</label>
+            </div>
+
+            <div id="delivery-fields">
+                <input type="text" id="direccion" placeholder="Dirección completa" style="width:100%; padding:12px; margin:10px 0;">
+                <input type="text" id="referencia" placeholder="Referencia" style="width:100%; padding:12px; margin:10px 0;">
+            </div>
+
+            <div id="cart-summary"></div>
+
+            <button class="boton" id="btn-confirmar-pedido">Confirmar Pedido</button>
+            <button class="boton cerrar">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
